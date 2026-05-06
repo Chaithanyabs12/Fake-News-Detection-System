@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detection</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- SVG WAVE BACKGROUND -->
+<div class="wave"></div>
+
+<!-- GLOW SHAPES -->
+<div class="glow top"></div>
+<div class="glow bottom"></div>
+
+<!-- DOT GRID -->
+<div class="dots"></div>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="icon">
+            <i class="fa-solid fa-newspaper"></i>
+        </div>
+
+        <h1>Fake News Detection System</h1>
+
+        <div class="divider"></div>
+
+        <form action="/predict" method="post">
+
+            <label>
+                <i class="fa-solid fa-pen"></i>
+                Enter News Content:
+            </label>
+
+            <textarea name="news" placeholder="Type or paste the news content here..." required></textarea>
+
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i> Check
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
